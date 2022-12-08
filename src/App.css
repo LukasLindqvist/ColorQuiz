@@ -1,38 +1,78 @@
-.App {
+body{
+  background-color: rgb(37, 43, 43);
+  font-family: 'Archivo Narrow', sans-serif;
+}
+.pageWrapper{
+  display: flex;
+  justify-content: center;
+}
+
+.pageContainer{
+  display: flex;
+  flex-direction:column;
+  align-items: center;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.spacer{
+  margin-top: 150px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.currentScore{
+  font-size: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.message{
+  text-align: center;
+}
+
+.color{
+  width: 300px;
+  height: 300px;
+  background-color: orange;
+  border-radius: 20px;
+}
+
+.correct{
+  color: green;
+  animation: fadeIn;
+  animation-duration: 500ms;
+}
+
+.wrong{
+  color: red;
+  animation: fadeIn;
+  animation-duration: 500ms;
+}
+
+.selectColor{
+  text-align: center;
+  margin-top: 15px;
+}
+
+.selectColor button{
+  font-family: 'Taviraj', serif;
   color: white;
+  background-color: transparent;
+  outline: 1px solid blue;
+  border-radius: 5px;
+  margin: 10px;
+  border: none;
+  height: 30px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.selectColor button:hover{
+  transform:scale(1.1);
+  outline: 1px solid rgb(4, 215, 243);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#wrongButton {
+  outline: 1px solid red;
+}
+
+
+/* Animate message */
+@keyframes fadeIn{
+  from{opacity: 0;}
 }
